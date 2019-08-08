@@ -1,108 +1,107 @@
 ---
 label: Config
 hide_body: true
-is_partial: false
 fields:
+- type: text
+  name: title
+  label: Site Title
+  config:
+    required: true
+- type: text
+  name: email
+  label: Email
+- type: text
+  name: description
+  label: Description
+- type: text
+  name: baseurl
+  label: Baseurl
+  description: The subpath of your site, e.g. /blog
+  hidden: true
+  default: "/"
+- type: field_group
+  name: author
+  label: Author
+  fields:
   - type: text
-    name: title
-    label: Site Title
+    name: name
+    label: Author Name
     config:
       required: true
   - type: text
-    name: email
-    label: Email
-  - type: text
-    name: description
-    label: Description
-  - type: text
-    name: baseurl
-    label: Baseurl
-    description: 'The subpath of your site, e.g. /blog'
-    hidden: true
-    default: /
-  - type: field_group
-    name: author
-    label: Author
-    fields:
-      - type: text
-        name: name
-        label: Author Name
-        config:
-          required: true
-      - type: text
-        name: twitter
-        label: Twitter Handle
-      - type: file
-        name: picture
-        label: Author Picture
-  - type: text
-    name: twitter_username
-    label: Twitter Username
-  - type: text
-    name: github_username
-    label: GitHub Username
+    name: twitter
+    label: Twitter Handle
   - type: file
-    name: logo
-    label: Site Logo
-  - type: boolean
-    name: search
-    label: Enable Search
-    description: Places a site search next  to the site menu
-    default: true
-  - type: number
-    name: paginate
-    label: Paginate
-    description: The number of entries allowed per page in pagination
-    default: 10
-    config:
-      required: true
-  - type: text
-    name: paginate_path
-    label: Paginate Path
-    hidden: true
+    name: picture
+    label: Author Picture
+- type: text
+  name: twitter_username
+  label: Twitter Username
+- type: text
+  name: github_username
+  label: GitHub Username
+- type: file
+  name: logo
+  label: Site Logo
+- type: boolean
+  name: search
+  label: Enable Search
+  description: Places a site search next  to the site menu
+  default: true
+- type: number
+  name: paginate
+  label: Paginate
+  description: The number of entries allowed per page in pagination
+  default: 10
+  config:
+    required: true
+- type: text
+  name: paginate_path
+  label: Paginate Path
+  hidden: true
+- type: field_group
+  name: collections
+  label: Collections
+  hidden: true
+  fields:
   - type: field_group
-    name: collections
-    label: Collections
-    hidden: true
+    name: recipes
+    label: Recipes
     fields:
-      - type: field_group
-        name: recipes
-        label: Recipes
-        fields:
-          - type: boolean
-            name: output
-            label: Output
-            default: true
-          - type: text
-            name: permalink
-            label: Permalink
-  - type: field_group_list
-    name: defaults
-    label: Defaults
-    hidden: true
+    - type: boolean
+      name: output
+      label: Output
+      default: true
+    - type: text
+      name: permalink
+      label: Permalink
+- type: field_group_list
+  name: defaults
+  label: Defaults
+  hidden: true
+  fields:
+  - type: field_group
+    name: scope
+    label: Scope
     fields:
-      - type: field_group
-        name: scope
-        label: Scope
-        fields:
-          - type: text
-            name: path
-            label: Path
-            config:
-              required: true
-          - type: text
-            name: type
-            label: Type
-            config:
-              required: true
-      - type: field_group
-        name: values
-        label: Values
-        fields:
-          - type: text
-            name: layout
-            label: Layout
-          - type: boolean
-            name: read_time
-            label: Read Time
-            default: true
+    - type: text
+      name: path
+      label: Path
+      config:
+        required: true
+    - type: text
+      name: type
+      label: Type
+      config:
+        required: true
+  - type: field_group
+    name: values
+    label: Values
+    fields:
+    - type: text
+      name: layout
+      label: Layout
+    - type: boolean
+      name: read_time
+      label: Read Time
+      default: true

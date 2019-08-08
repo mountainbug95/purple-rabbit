@@ -2,93 +2,107 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: admin
-webhook_url: 'https://dev-api.stackbit.com/project/5d4c3017bbe7ce0010d8e90c/webhook/forestry'
+webhook_url: https://dev-api.stackbit.com/project/5d4c3017bbe7ce0010d8e90c/webhook/forestry
 sections:
-  - type: document
-    label: Config
-    path: _config.yml
-    templates:
-      - config
-  - type: document
-    label: Curriculum Vitæ data
-    path: _data/cv.json
-    templates:
-      - cv
-  - type: document
-    label: Theme Data
-    path: _data/theme.yml
-    templates:
-      - theme
-  - type: document
-    label: Curriculum Vitæ Page
-    path: cv.md
-    templates:
-      - cvpage
-  - type: document
-    label: About Page
-    path: about.md
-    templates:
-      - about
-  - type: document
-    label: Categories Page
-    path: categories.md
-    templates:
-      - categories
-  - type: document
-    label: Home Page
-    path: index.html
-    templates:
-      - home
-  - type: document
-    label: Page
-    path: 404.md
-    templates:
-      - notfound
-  - type: jekyll-posts
-    label: Post
-    create: all
-    templates:
-      - post
-  - type: document
-    label: Posts
-    path: posts.md
-    templates:
-      - posts
-  - type: document
-    label: Tags
-    path: tags.md
-    templates:
-      - tags
-  - type: directory
-    path: _tags
-    match: '**/*'
-    label: Tag
-    create: all
-    templates:
-      - tag
-  - type: directory
-    path: _collections
-    match: '**/*'
-    label: Collection
-    create: all
-    templates:
-      - collection
-  - type: directory
-    path: _categories
-    match: '**/*'
-    label: Category
-    create: all
-    templates:
-      - category
-  - type: directory
-    path: ''
-    match: _recipes
-    label: Recipe
-    create: all
-    templates:
-      - recipe
+- type: document
+  path: _config.yml
+  label: Config
+  templates:
+  - config
+- type: document
+  path: _data/cv.json
+  label: Curriculum Vitæ data
+  templates:
+  - cv
+- type: document
+  path: _data/theme.yml
+  label: Theme Data
+  templates:
+  - theme
+- type: document
+  path: cv.md
+  label: Curriculum Vitæ Page
+  templates:
+  - cvpage
+- type: document
+  path: about.md
+  label: About Page
+  templates:
+  - about
+- type: document
+  path: categories.md
+  label: Categories Page
+  templates:
+  - categories
+- type: document
+  path: index.html
+  label: Home Page
+  templates:
+  - home
+- type: document
+  path: 404.md
+  label: Page
+  templates:
+  - notfound
+- type: jekyll-posts
+  label: Post
+  create: all
+  templates:
+  - post
+- type: document
+  path: posts.md
+  label: Posts
+  templates:
+  - posts
+- type: document
+  path: tags.md
+  label: Tags
+  templates:
+  - tags
+- type: directory
+  path: _tags
+  label: Tag
+  create: all
+  match: "**/*"
+  templates:
+  - tag
+- type: directory
+  path: _collections
+  label: Collection
+  create: all
+  match: "**/*"
+  templates:
+  - collection
+- type: directory
+  path: _categories
+  label: Category
+  create: all
+  match: "**/*"
+  templates:
+  - category
+- type: directory
+  path: ''
+  label: Recipe
+  create: all
+  match: _recipes
+  templates:
+  - recipe
 upload_dir: images
-public_path: /images
+public_path: "/images"
 front_matter_path: ''
 use_front_matter_path: false
-file_template: ':filename:'
+file_template: ":filename:"
+build:
+  preview_command: bundle exec jekyll build --drafts --unpublished --future -d _site
+  publish_command: bundle exec jekyll build -d _site
+  preview_env:
+  - JEKYLL_ENV=staging
+  publish_env:
+  - JEKYLL_ENV=production
+  preview_output_directory: _site
+  output_directory: _site
+  instant_preview_command: bundle exec jekyll serve --drafts --unpublished --future
+    --port 8080 --host 0.0.0.0 -d _site
+  install_dependencies_command: bundle install --path vendor/bundle
+  preview_docker_image: forestryio/ruby:2.6
+  mount_path: "/srv"

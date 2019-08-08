@@ -1,27 +1,26 @@
 ---
 label: Categories Page
-is_partial: false
+hide_body: false
 fields:
-  - type: text
-    name: title
-    label: Page Title
-    config:
-      required: true
-  - type: select
-    name: permalink
-    label: Permalink
-    default: /categories/
-    config:
-      required: true
-      source:
-        type: custom
-      options:
-        - /categories/
-  - type: text
-    name: layout
-    label: Layout
-    hidden: true
-    default: categories
-    config:
-      required: true
-pages: []
+- type: text
+  name: title
+  label: Page Title
+  config:
+    required: true
+- type: select
+  name: permalink
+  label: Permalink
+  default: "/categories/"
+  config:
+    required: true
+    source:
+      type: custom
+    options:
+    - "/categories/"
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  default: categories
+  config:
+    required: true

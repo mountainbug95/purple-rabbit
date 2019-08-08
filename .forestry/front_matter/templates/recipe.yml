@@ -1,37 +1,36 @@
 ---
 label: Recipe
-is_partial: false
+hide_body: false
 fields:
-  - type: text
-    name: title
-    label: Recipe Title
-    config:
-      required: true
-  - type: field_group
-    name: image
+- type: text
+  name: title
+  label: Recipe Title
+  config:
+    required: true
+- type: field_group
+  name: image
+  label: Recipe Image
+  fields:
+  - type: file
+    name: path
     label: Recipe Image
-    fields:
-      - type: file
-        name: path
-        label: Recipe Image
-        description: The image displayed above the page content
-      - type: file
-        name: thumbnail
-        label: Recipe Thumbnail
-        description: The thumbnail image used for thr recipe
-      - type: textarea
-        name: caption
-        label: Image Caption
-        description: The caption used for the recipe image
-        config:
-          wysiwyg: true
-          schema:
-            format: markdown
-  - type: text
-    name: layout
-    label: Layout
-    hidden: true
-    default: post
+    description: The image displayed above the page content
+  - type: file
+    name: thumbnail
+    label: Recipe Thumbnail
+    description: The thumbnail image used for thr recipe
+  - type: textarea
+    name: caption
+    label: Image Caption
+    description: The caption used for the recipe image
     config:
-      required: true
-pages: []
+      wysiwyg: true
+      schema:
+        format: markdown
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  default: post
+  config:
+    required: true

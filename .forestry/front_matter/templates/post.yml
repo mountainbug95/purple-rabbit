@@ -1,43 +1,42 @@
 ---
 label: Post
-is_partial: false
+hide_body: false
 fields:
-  - type: text
-    name: title
-    label: Post Title
-  - type: textarea
-    name: excerpt
-    label: Post Excerpt
-  - type: text
-    name: sub_title
-    label: Subtitle
-  - type: file
-    name: image
-    label: Hero Image
-  - type: text
-    name: excerpt_separator
-    label: Excerpt Separator
-  - type: list
-    name: categories
-    label: Categories
-  - type: list
-    name: elements
-    label: Elements
-  - type: list
-    name: tags
-    label: Tags
-  - type: datetime
-    name: date
-    label: Date
-    description: just a generic date (can use future dates)
-  - type: datetime
-    name: last_modified_at
-    label: Date Last Modified
-  - type: text
-    name: layout
-    label: Layout
-    hidden: true
-    default: post
-    config:
-      required: true
-pages: []
+- type: text
+  name: title
+  label: Post Title
+- type: textarea
+  name: excerpt
+  label: Post Excerpt
+- type: text
+  name: sub_title
+  label: Subtitle
+- type: file
+  name: image
+  label: Hero Image
+- type: text
+  name: excerpt_separator
+  label: Excerpt Separator
+- type: list
+  name: categories
+  label: Categories
+- type: list
+  name: elements
+  label: Elements
+- type: list
+  name: tags
+  label: Tags
+- type: datetime
+  name: date
+  label: Date
+  description: just a generic date (can use future dates)
+- type: datetime
+  name: last_modified_at
+  label: Date Last Modified
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  default: post
+  config:
+    required: true

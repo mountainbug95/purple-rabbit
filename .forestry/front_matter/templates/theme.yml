@@ -1,130 +1,128 @@
 ---
 label: Theme Data
 hide_body: true
-is_partial: false
 fields:
-  - type: select
-    name: skin
-    label: Skin
-    description: The skin used for the theme
-    default: default
+- type: select
+  name: skin
+  label: Skin
+  description: The skin used for the theme
+  default: default
+  config:
+    required: true
+    source:
+      type: custom
+    options:
+    - default
+    - night
+    - plum
+    - sea
+    - soft
+    - steel
+- type: field_group
+  name: t
+  label: General Text
+  description: The text displayed in different buttons/elements throughout the template
+  fields:
+  - type: text
+    name: skip_links
+    label: Skip Links
+    default: text not set
+  - type: text
+    name: skip_primary_nav
+    label: Skip Primary Nav
+    default: text not set
+  - type: text
+    name: skip_content
+    label: Skip Content
+    default: text not set
+  - type: text
+    name: skip_footer
+    label: Skip Footer
+    default: text not set
+  - type: text
+    name: menu
+    label: Menu
+    default: text not set
+  - type: text
+    name: search
+    label: Search
+    default: text not set
+  - type: text
+    name: site_search
+    label: Site Search
+    default: text not set
+  - type: text
+    name: results_found
+    label: Results Found
+    default: text not set
+  - type: text
+    name: search_placeholder_text
+    label: Search Placeholder Text
+    default: text not set
+  - type: text
+    name: home
+    label: Home
+    default: text not set
+  - type: text
+    name: newer
+    label: Newer
+    default: text not set
+  - type: text
+    name: older
+    label: Older
+    default: text not set
+  - type: text
+    name: email
+    label: Email
+    default: text not set
+  - type: text
+    name: subscribe
+    label: Subscribe
+    default: text not set
+  - type: text
+    name: read_more
+    label: Read More
+    default: text not set
+  - type: text
+    name: posts
+    label: Posts
+    default: text not set
+  - type: text
+    name: page
+    label: Page
+    default: text not set
+  - type: text
+    name: of
+    label: Of
+    default: text not set
+  - type: text
+    name: min_read
+    label: Min Read
+    default: text not set
+  - type: text
+    name: present
+    label: Present
+    default: text not set
+- type: field_group_list
+  name: google_fonts
+  label: Google Fonts
+  config:
+    labelField: name
+  fields:
+  - type: text
+    name: name
+    label: Font Name
     config:
       required: true
-      source:
-        type: custom
-      options:
-        - default
-        - night
-        - plum
-        - sea
-        - soft
-        - steel
-  - type: field_group
-    name: t
-    label: General Text
-    description: The text displayed in different buttons/elements throughout the template
-    fields:
-      - type: text
-        name: skip_links
-        label: Skip Links
-        default: text not set
-      - type: text
-        name: skip_primary_nav
-        label: Skip Primary Nav
-        default: text not set
-      - type: text
-        name: skip_content
-        label: Skip Content
-        default: text not set
-      - type: text
-        name: skip_footer
-        label: Skip Footer
-        default: text not set
-      - type: text
-        name: menu
-        label: Menu
-        default: text not set
-      - type: text
-        name: search
-        label: Search
-        default: text not set
-      - type: text
-        name: site_search
-        label: Site Search
-        default: text not set
-      - type: text
-        name: results_found
-        label: Results Found
-        default: text not set
-      - type: text
-        name: search_placeholder_text
-        label: Search Placeholder Text
-        default: text not set
-      - type: text
-        name: home
-        label: Home
-        default: text not set
-      - type: text
-        name: newer
-        label: Newer
-        default: text not set
-      - type: text
-        name: older
-        label: Older
-        default: text not set
-      - type: text
-        name: email
-        label: Email
-        default: text not set
-      - type: text
-        name: subscribe
-        label: Subscribe
-        default: text not set
-      - type: text
-        name: read_more
-        label: Read More
-        default: text not set
-      - type: text
-        name: posts
-        label: Posts
-        default: text not set
-      - type: text
-        name: page
-        label: Page
-        default: text not set
-      - type: text
-        name: of
-        label: Of
-        default: text not set
-      - type: text
-        name: min_read
-        label: Min Read
-        default: text not set
-      - type: text
-        name: present
-        label: Present
-        default: text not set
-  - type: field_group_list
-    name: google_fonts
-    label: Google Fonts
+  - type: text
+    name: weights
+    label: Font Weights
+    description: Must be a comma delimited list
+    default: 400,400i,600,600i
     config:
-      labelField: name
-    fields:
-      - type: text
-        name: name
-        label: Font Name
-        config:
-          required: true
-      - type: text
-        name: weights
-        label: Font Weights
-        description: Must be a comma delimited list
-        default: '400,400i,600,600i'
-        config:
-          required: true
-  - type: list
-    name: navigation_pages
-    label: Navigation Pages
-    description: >-
-      A list of pages to be displayed in the site menu (must reference .md
-      files)
+      required: true
+- type: list
+  name: navigation_pages
+  label: Navigation Pages
+  description: A list of pages to be displayed in the site menu (must reference .md
+    files)
