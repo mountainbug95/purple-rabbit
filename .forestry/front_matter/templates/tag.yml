@@ -1,0 +1,24 @@
+---
+label: Tag
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Tag Title
+    config:
+      required: true
+  - type: text
+    name: permalink
+    label: Permalink
+    default: /tags/tag_name
+  - type: text
+    name: taxonomy
+    label: Taxonomy
+  - type: text
+    name: layout
+    label: Layout
+    hidden: true
+    default: tag
+    config:
+      required: true
+pages: []

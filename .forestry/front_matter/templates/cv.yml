@@ -1,0 +1,277 @@
+---
+label: Curriculum Vitæ data
+hide_body: true
+is_partial: false
+fields:
+  - type: field_group
+    name: basics
+    label: Basics
+    description: Basic Information
+    fields:
+      - type: text
+        name: name
+        label: Author Name
+      - type: text
+        name: label
+        label: Author Label
+        description: Displayed below the author name in the cv
+      - type: file
+        name: picture
+        label: Author Picture
+        description: A picture of the author
+      - type: text
+        name: email
+        label: Author Email
+      - type: text
+        name: phone
+        label: Author Phone Number
+      - type: text
+        name: website
+        label: Author Website
+      - type: textarea
+        name: summary
+        label: Author Summary
+        config:
+          wysiwyg: true
+          schema:
+            format: markdown
+      - type: field_group
+        name: location
+        label: Author Location
+        fields:
+          - type: text
+            name: address
+            label: Address
+          - type: text
+            name: postalCode
+            label: Postal Code
+          - type: text
+            name: city
+            label: City
+          - type: text
+            name: countryCode
+            label: Country Code
+          - type: text
+            name: region
+            label: Region
+      - type: field_group_list
+        name: profiles
+        label: Profiles
+        description: Social network profiles
+        config:
+          labelField: network
+        fields:
+          - type: text
+            name: network
+            label: Network
+            config:
+              required: true
+          - type: text
+            name: username
+            label: Username
+            config:
+              required: true
+          - type: text
+            name: url
+            label: URL
+  - type: field_group_list
+    name: work
+    label: Work
+    config:
+      labelField: company
+    fields:
+      - type: text
+        name: company
+        label: Company Name
+        config:
+          required: true
+      - type: text
+        name: position
+        label: Position
+      - type: text
+        name: website
+        label: Company Website
+      - type: datetime
+        name: startDate
+        label: Start Date
+      - type: datetime
+        name: endDate
+        label: End Date
+      - type: textarea
+        name: summary
+        label: Job Summary
+      - type: list
+        name: highlights
+        label: Job Highlights
+  - type: field_group_list
+    name: volunteer
+    label: Volunteer
+    config:
+      labelField: organization
+    fields:
+      - type: text
+        name: organization
+        label: Organization Name
+        config:
+          required: true
+      - type: text
+        name: position
+        label: Position
+      - type: text
+        name: website
+        label: Organization Website
+      - type: datetime
+        name: startDate
+        label: Start Date
+      - type: datetime
+        name: endDate
+        label: End Date
+      - type: textarea
+        name: summary
+        label: Volunteer Summary
+      - type: list
+        name: highlights
+        label: Volunteer Highlights
+  - type: field_group_list
+    name: education
+    label: Education
+    config:
+      labelField: institution
+    fields:
+      - type: text
+        name: institution
+        label: Institution Name
+        config:
+          required: true
+      - type: text
+        name: area
+        label: Area
+      - type: text
+        name: studyType
+        label: Study Type
+      - type: datetime
+        name: startDate
+        label: Start Date
+      - type: datetime
+        name: endDate
+        label: End Date
+      - type: text
+        name: gpa
+        label: GPA
+      - type: list
+        name: courses
+        label: Courses
+  - type: field_group_list
+    name: awards
+    label: Awards
+    config:
+      labelField: title
+    fields:
+      - type: text
+        name: title
+        label: Award Title
+        config:
+          required: true
+      - type: datetime
+        name: date
+        label: Date
+      - type: text
+        name: awarder
+        label: Awarder
+      - type: textarea
+        name: summary
+        label: Award Summary
+        config:
+          wysiwyg: true
+          schema:
+            format: markdown
+  - type: field_group_list
+    name: publications
+    label: Publications
+    config:
+      labelField: name
+    fields:
+      - type: text
+        name: name
+        label: Publication Name
+        config:
+          required: true
+      - type: text
+        name: publisher
+        label: Publisher
+      - type: datetime
+        name: releaseDate
+        label: Release Date
+      - type: text
+        name: website
+        label: Publication Website
+      - type: textarea
+        name: summary
+        label: Publication Summary
+        config:
+          wysiwyg: true
+          schema:
+            format: markdown
+  - type: field_group_list
+    name: skills
+    label: Skills
+    config:
+      labelField: name
+    fields:
+      - type: text
+        name: name
+        label: Skill Name
+        config:
+          required: true
+      - type: text
+        name: level
+        label: Skill Level
+      - type: list
+        name: keywords
+        label: Keywords
+  - type: field_group_list
+    name: languages
+    label: Languages
+    config:
+      labelField: language
+    fields:
+      - type: text
+        name: language
+        label: Language
+        config:
+          required: true
+      - type: text
+        name: fluency
+        label: Fluency
+  - type: field_group_list
+    name: interests
+    label: Interests
+    config:
+      labelField: name
+    fields:
+      - type: text
+        name: name
+        label: Interest Name
+        config:
+          required: true
+      - type: list
+        name: keywords
+        label: Keywords
+  - type: field_group_list
+    name: references
+    label: References
+    config:
+      labelField: name
+    fields:
+      - type: text
+        name: name
+        label: Reference Name
+        config:
+          required: true
+      - type: textarea
+        name: reference
+        label: Reference
+        config:
+          wysiwyg: true
+          schema:
+            format: markdown

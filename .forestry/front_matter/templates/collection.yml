@@ -1,0 +1,34 @@
+---
+label: Collection
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Collection Title
+    config:
+      required: true
+  - type: text
+    name: permalink
+    label: Permalink
+    default: /collection_name/
+  - type: text
+    name: collection
+    label: specify the collection being referenced
+    default: collection_not_specified
+    config:
+      required: true
+  - type: text
+    name: entries_layout
+    label: Entries Layout
+    hidden: true
+    default: grid
+    config:
+      required: true
+  - type: text
+    name: layout
+    label: Layout
+    hidden: true
+    default: collection
+    config:
+      required: true
+pages: []

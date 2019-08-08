@@ -1,0 +1,37 @@
+---
+label: Posts
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Page Title
+    config:
+      required: true
+  - type: select
+    name: permalink
+    label: Permalink
+    default: /posts/
+    config:
+      required: true
+      source:
+        type: custom
+      options:
+        - /posts/
+  - type: select
+    name: entries_layout
+    label: Entries Layout
+    default: list
+    config:
+      required: true
+      source:
+        type: custom
+      options:
+        - list
+  - type: text
+    name: layout
+    label: Layout
+    hidden: true
+    default: posts
+    config:
+      required: true
+pages: []

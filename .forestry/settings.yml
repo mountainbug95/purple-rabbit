@@ -1,0 +1,94 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: admin
+webhook_url: 'https://dev-api.stackbit.com/project/5d4c3017bbe7ce0010d8e90c/webhook/forestry'
+sections:
+  - type: document
+    label: Config
+    path: _config.yml
+    templates:
+      - config
+  - type: document
+    label: Curriculum Vitæ data
+    path: _data/cv.json
+    templates:
+      - cv
+  - type: document
+    label: Theme Data
+    path: _data/theme.yml
+    templates:
+      - theme
+  - type: document
+    label: Curriculum Vitæ Page
+    path: cv.md
+    templates:
+      - cvpage
+  - type: document
+    label: About Page
+    path: about.md
+    templates:
+      - about
+  - type: document
+    label: Categories Page
+    path: categories.md
+    templates:
+      - categories
+  - type: document
+    label: Home Page
+    path: index.html
+    templates:
+      - home
+  - type: document
+    label: Page
+    path: 404.md
+    templates:
+      - notfound
+  - type: jekyll-posts
+    label: Post
+    create: all
+    templates:
+      - post
+  - type: document
+    label: Posts
+    path: posts.md
+    templates:
+      - posts
+  - type: document
+    label: Tags
+    path: tags.md
+    templates:
+      - tags
+  - type: directory
+    path: _tags
+    match: '**/*'
+    label: Tag
+    create: all
+    templates:
+      - tag
+  - type: directory
+    path: _collections
+    match: '**/*'
+    label: Collection
+    create: all
+    templates:
+      - collection
+  - type: directory
+    path: _categories
+    match: '**/*'
+    label: Category
+    create: all
+    templates:
+      - category
+  - type: directory
+    path: ''
+    match: _recipes
+    label: Recipe
+    create: all
+    templates:
+      - recipe
+upload_dir: images
+public_path: /images
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ':filename:'

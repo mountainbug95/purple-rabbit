@@ -1,0 +1,85 @@
+---
+label: Home Page
+is_partial: false
+fields:
+  - type: boolean
+    name: paginate
+    label: Paginate
+    description: Enables pagination on the page
+    default: true
+  - type: text
+    name: alt_title
+    label: Alt Title
+    description: Display this instead of the site title on the home page
+  - type: text
+    name: sub_title
+    label: Subtitle
+    description: The text displayed below the alt title (or subtitle) on the home page
+  - type: file
+    name: image
+    label: Home Image
+    description: The image displayed at the top of the home page
+  - type: textarea
+    name: introduction
+    label: Introduction
+    description: The home introduction content
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  - type: field_group_list
+    name: actions
+    label: Action Buttons
+    description: Home action buttons
+    config:
+      labelField: label
+    fields:
+      - type: text
+        name: label
+        label: Button Label
+        description: The text displayed inside the button
+      - type: select
+        name: icon
+        label: Button Icon
+        description: The Icon displayed beside the button label
+        config:
+          source:
+            type: custom
+          options:
+            - arrow-left
+            - arrow-right
+            - bitbucket
+            - calendar
+            - codepen
+            - download
+            - dribbble
+            - email
+            - facebook
+            - flicker
+            - github
+            - gitlab
+            - googleplus
+            - instagram
+            - lastfm
+            - linkedin
+            - pdf
+            - pinterest
+            - rss
+            - soundcloud
+            - stackoverflow
+            - stopwatch
+            - tumblr
+            - twitter
+            - xing
+            - youtube
+      - type: text
+        name: url
+        label: URL
+  - type: text
+    name: layout
+    label: Layout
+    hidden: true
+    default: home
+    config:
+      required: true
+pages: []

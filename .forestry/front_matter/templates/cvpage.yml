@@ -1,0 +1,66 @@
+---
+label: Curriculum Vitæ Page
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Page Title
+    config:
+      required: true
+  - type: field_group_list
+    name: actions
+    label: Action Buttons
+    config:
+      labelField: label
+    fields:
+      - type: text
+        name: label
+        label: Button Label
+        description: The text displayed inside the button
+        config:
+          required: true
+      - type: select
+        name: icon
+        label: Button Icon
+        description: The Icon displayed beside the button label
+        config:
+          source:
+            type: custom
+          options:
+            - arrow-left
+            - arrow-right
+            - bitbucket
+            - calendar
+            - codepen
+            - download
+            - dribbble
+            - email
+            - facebook
+            - flicker
+            - github
+            - gitlab
+            - googleplus
+            - instagram
+            - lastfm
+            - linkedin
+            - pdf
+            - pinterest
+            - rss
+            - soundcloud
+            - stackoverflow
+            - stopwatch
+            - tumblr
+            - twitter
+            - xing
+            - youtube
+      - type: text
+        name: url
+        label: URL
+  - type: text
+    name: layout
+    label: Layout
+    hidden: true
+    default: cv
+    config:
+      required: true
+pages: []

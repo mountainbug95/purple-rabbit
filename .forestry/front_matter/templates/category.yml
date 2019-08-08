@@ -1,0 +1,24 @@
+---
+label: Category
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Category Title
+    config:
+      required: true
+  - type: text
+    name: permalink
+    label: Permalink
+    default: /categories/category_name/
+  - type: text
+    name: taxonomy
+    label: Taxonomy
+  - type: text
+    name: layout
+    label: Layout
+    hidden: true
+    default: category
+    config:
+      required: true
+pages: []

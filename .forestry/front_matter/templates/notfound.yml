@@ -1,0 +1,27 @@
+---
+label: Page
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Page Title
+    config:
+      required: true
+  - type: select
+    name: permalink
+    label: Permalink
+    default: /404.html
+    config:
+      required: true
+      source:
+        type: custom
+      options:
+        - /404.html
+  - type: text
+    name: layout
+    label: Layout
+    hidden: true
+    default: page
+    config:
+      required: true
+pages: []
